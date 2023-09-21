@@ -1,5 +1,7 @@
 package main
 
+/*
+
 // identifyOverloadedFunctionRelations は関数のオーバーロード関係を特定する関数です。
 // この関数では、関数の名前と引数の型を基に、オーバーロードされた関数を特定し、
 // それらの関数をグループ化します。
@@ -11,7 +13,7 @@ func identifyOverloadedFunctionRelations(functionInfos map[string]*FunctionInfo)
 	for _, funcInfo := range functionInfos {
 		// ここでは簡略化のため、関数名だけを使用してオーバーロード関係を特定します
 		// (実際には引数の型も考慮する必要があります)
-		overloadedFunctions[funcInfo.Name] = append(overloadedFunctions[funcInfo.Name], funcInfo)
+		overloadedFunctions[funcInfo.FullName] = append(overloadedFunctions[funcInfo.Name], funcInfo)
 	}
 
 	// オーバーロード関係を特定した後、それを FunctionInfo 構造体に格納します
@@ -29,3 +31,4 @@ func identifyOverloadedFunctionRelations(functionInfos map[string]*FunctionInfo)
 
 	return nil
 }
+*/

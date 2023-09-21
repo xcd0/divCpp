@@ -1,11 +1,11 @@
 package main
 
-import "strings"
+/*
 
 // identifyNamespaces は C++ ファイルの内容と関数情報を受け取り、
 // 各関数がどの名前空間に属しているかを識別します。
 // この関数は名前空間のネストにも対応します。
-func identifyNamespaces(fileContent string, functionInfos map[string]*FunctionInfo) error {
+func identifyNamespaces(fileContent string, functionInfos []*FunctionInfo) error {
 	// 以下のステップで名前空間を識別します:
 	// 1. ファイル内容から名前空間の定義を探します (namespace { ... } の形式を探します)
 	// 2. 名前空間のネストを識別します (名前空間内に他の名前空間が定義されている場合)
@@ -43,3 +43,4 @@ func identifyNamespaces(fileContent string, functionInfos map[string]*FunctionIn
 
 	return nil
 }
+*/

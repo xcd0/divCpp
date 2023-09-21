@@ -7,7 +7,7 @@ func analyzeFunctionCallRelations(functionInfos map[string]*FunctionInfo) error 
 	for callerName, callerInfo := range functionInfos {
 		for calleeName, calleeInfo := range functionInfos {
 			// 呼び出し関係を解析する簡易的な方法として、関数の本体に他の関数の名前が含まれているかを確認します。
-			if callerName != calleeName && strings.Contains(callerInfo.Body, calleeName) {
+			if callerName != calleeName && strings.Contains(callerInfo.FunctionDefinitionBody, calleeName) {
 				calleeInfo.CalledBy = append(calleeInfo.CalledBy, callerName)
 			}
 		}

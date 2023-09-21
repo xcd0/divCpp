@@ -30,7 +30,7 @@ func createNewCppFiles(fileInfo *FileInfo, functionInfos map[string]*FunctionInf
 		}
 
 		// 関数定義を記述します
-		_, err = newCppFile.WriteString(funcInfo.Definition)
+		_, err = newCppFile.WriteString(funcInfo.FunctionDefinitionBody)
 		if err != nil {
 			return fmt.Errorf("could not write to file %s: %v", newCppFileName, err)
 		}

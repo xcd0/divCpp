@@ -34,15 +34,15 @@ func createNewHeaderFile(fileInfo *FileInfo, functionInfos map[string]*FunctionI
 	// 関数宣言と関連するコメントを .hpp ファイルに記述します
 	for _, functionInfo := range functionInfos {
 		// 関数定義の直前にあるコメントを記述します
-		if functionInfo.CommentBefore != "" {
-			_, err := file.WriteString(functionInfo.CommentBefore + "\n")
+		if functionInfo.FunctionCommentBefore != "" {
+			_, err := file.WriteString(functionInfo.FunctionCommentBefore + "\n")
 			if err != nil {
 				return fmt.Errorf("could not write to header file: %w", err)
 			}
 		}
 
 		// 関数宣言を記述します
-		_, err := file.WriteString(functionInfo.Declaration + ";\n")
+		_, err := file.WriteString(functionInfo.FunctionDeclaration + ";\n")
 		if err != nil {
 			return fmt.Errorf("could not write to header file: %w", err)
 		}
